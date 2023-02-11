@@ -6,6 +6,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+const pvectlVersion = "dev"
+
 // NewRootCmd creates a new pvectl command instance
 func NewRootCmd() *cobra.Command {
 	// rootCmd represents the base command when called without any subcommands
@@ -15,6 +17,7 @@ func NewRootCmd() *cobra.Command {
 		Long: `pvectl is a CLI tool to manage ProxmoxVE clusters
 
 Find more information at https://github.com/FedericoAntoniazzi/pvectl`,
+		Version: pvectlVersion,
 	}
 
 	// Add subcommands
