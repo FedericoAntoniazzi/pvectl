@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/FedericoAntoniazzi/pvectl/cmd/node"
 	"github.com/FedericoAntoniazzi/pvectl/internal/config"
 	"github.com/luthermonson/go-proxmox"
 	"github.com/spf13/cobra"
@@ -26,7 +27,9 @@ Find more information at https://github.com/FedericoAntoniazzi/pvectl`,
 	}
 
 	// Add subcommands
-	// rootCmd.AddCommand()
+	rootCmd.AddCommand(
+		node.NewNodeCmd(pveClient),
+	)
 
 	// Add flags
 
