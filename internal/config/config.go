@@ -22,6 +22,7 @@ type Config struct {
 	}
 }
 
+// GetConfig reads the configuration file
 func GetConfig() (Config, error) {
 	var config Config
 	err := fig.Load(&config, fig.File("pvectl.yaml"), fig.Dirs("."), fig.UseEnv("PVECTL"))
